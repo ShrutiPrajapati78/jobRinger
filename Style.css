@@ -1,0 +1,608 @@
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      position: sticky;  
+      top: 0; 
+      z-index: 1000; 
+
+
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links div,
+    .nav-links button {
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      background: none;
+      border: none;
+      padding: 8px 12px;
+    }
+
+    .nav-links button.login {
+     border: 1px solid black;
+      border-radius: 5px;
+      color: black;
+    }
+
+    .nav-links button.signup {
+      background-color: #FEBA17;
+      color: rgb(10, 10, 10);
+      border-radius: 5px;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+      }
+    }
+
+   .welcome_offer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background : linear-gradient(105deg, #66D2CE, #0118D8);
+        padding: 10px 15px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); */
+   }
+
+   #text1 {
+    color: white;
+    margin-left: 30px;
+   }
+
+  .welcome_offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(105deg, #66D2CE, #0118D8);
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  flex-wrap: wrap; /* optional: wraps on smaller screens even without media query */
+  gap: 10px;        /* consistent spacing */
+}
+
+#text1 {
+  color: white;
+  margin-left: 30px;
+}
+
+.welcome_offer button.register {
+  width: 180px;
+  background: #FFD63A;
+  border: none;
+  border-radius: 8px;
+  color: #10100f;
+  font-size: 1rem;
+  padding: 10px 6px;
+  margin-left: 140px;
+}
+
+#offer {
+  color: #ffde4df0;
+  margin-left: 190px;
+}
+
+.welcome_offer button.post {
+  width: 110px;
+  border-radius: 8px;
+  color: #10100f;
+  font-size: 1rem;
+  border: none;
+  padding: 10px 6px;
+  margin-right: 10px;
+}
+
+.enquiry {
+  margin-right: 20px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .welcome_offer {
+    flex-direction: column;
+    align-items: stretch;
+    width: calc(100% - 20px);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  #text1,
+  #offer,
+  .enquiry {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 0.95rem;
+  }
+
+  .welcome_offer button.register,
+  .welcome_offer button.post {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 8px;
+    margin: 0; /* reset margin */
+  }
+
+  .enquiry {
+    margin-right: 0;
+  }
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin: 10px;
+}
+
+/* Base search container */
+.search-container {
+  display: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  background-color: #66D2CE;
+  padding: 15px;
+  border-radius: 10px;
+  /* margin: 10px; */
+  width: 50%;
+  margin-left: 25px;
+  margin-right: 20px;
+}
+
+/* .enter{
+  margin-right: 10%;
+  width: 30%;
+}*/
+
+.mark {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5px;              /* Uniform space between buttons */
+  padding: 10px 15px;
+  flex-wrap: wrap;        /* Wrap on smaller screens */
+}
+
+/* View Button */
+.mark button.view {
+  width: 120px;
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #10100f;
+  font-size: 1rem;
+  padding: 7px 10px;
+  transition: background 0.3s ease;
+}
+
+.mark button.view:hover {
+  background-color: #d5d5d5;
+}
+
+/* Register Button */
+.mark button.register {
+  width: 180px;
+  background: #FFD63A;
+  border: none;
+  border-radius: 8px;
+  color: #10100f;
+  font-size: 1rem;
+  padding: 8px 15px;
+  transition: background 0.3s ease;
+}
+
+.mark button.register:hover {
+  background-color: #e6be2f;
+}
+
+/* ✅ Mobile responsive */
+@media (max-width: 768px) {
+  .mark {
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .mark button.view,
+  .mark button.register {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+
+/* view job*/
+/* Search box input */
+.search-box {
+  flex: 1;
+  width: 500px;
+  min-width: 200px;
+  max-width: 100%;
+  padding: 7px 10px;
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Search button */
+.search-button {
+  padding: 7px 15px;
+  background-color: #FFD63A;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.search-button:hover {
+  background-color: #f0c727;
+}
+
+/* Optional: heading styles */
+.heading {
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.heading h3 {
+  font-weight: bolder;
+}
+
+.heading h4 {
+  margin-top: 10px;
+  color: #070f54e1;
+}
+
+/* ✅ Desktop Styles */
+.search-container,
+.quick_job_search {
+  width: 48%;
+  background-color: #66D2CE;
+  padding: 0px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  text-align: center; */
+  box-sizing: border-box; /* ensures padding doesn't affect width */
+}
+
+/* Optional: If you want side-by-side layout */
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search-container{
+  margin-left: 20px;
+  margin-right: 30px;
+}
+.quick_job_search{
+  margin-right: 40px;
+  margin-left: 30px;
+}
+/* ✅ Quick Job Search */
+.quick_job_search h2 {
+  color: #040831;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.quick_job_search p {
+  color: white;
+  margin: 8px 0;
+  font-size: 0.9rem;
+  line-height: 2.2;
+  padding: 10px;
+  justify-content: space-around;
+ 
+}
+
+/* ✅ Media Query: Mobile Styles */
+@media (max-width: 768px) {
+  .search-wrapper {
+    flex-direction: column;
+  }
+
+  .search-container,
+  .quick_job_search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-box,
+  .search-button {
+    width: 100%;
+  }
+}
+
+.featured{
+  margin: 10px;
+  color: #384b65;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.featured-jobs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.job-card {
+  position: relative;
+  width: 23%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.job-type {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f4c400;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 5px 8px;
+  font-weight: bold;
+  border-bottom-left-radius: 8px;
+}
+
+.job-title {
+  margin-top: 25px;
+  color: #0118D8;
+  font-size: 1rem;
+}
+
+.company {
+  font-weight: bold;
+  color: #222;
+  margin: 8px 0;
+}
+
+.job-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.job-details li {
+  margin-bottom: 6px;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #00b3b3;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background-color: #009999;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.section-heading span {
+  color: #0118D8;
+}
+
+@media (max-width: 1024px) {
+  .job-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    width: 100%;
+  }
+
+  .featured-jobs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .apply-btn {
+    font-size: 0.95rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+  }
+}
+
+.job-footer {
+  background: #e9f1f5;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  color: #101010;
+  border-top: 2px solid #ccc;
+}
+
+.locations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+}
+
+.locations h3 {
+  font-weight: bold;
+  color: #000040;
+  margin-bottom: 8px;
+}
+
+.locations p {
+  max-width: 600px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.job-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 30px 0;
+  font-weight: bold;
+}
+
+.job-stats div span {
+  font-size: 1.8rem;
+  color: #012A8D;
+  display: block;
+  margin-top: 5px;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: #444;
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+.recognition {
+  margin-top: 10px;
+}
+
+.recognition img {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom .socials {
+  margin-bottom: 10px;
+}
+
+.footer-bottom i {
+  font-size: 1.2rem;
+  margin: 0 6px;
+  color: #3f4147;
+  cursor: pointer;
+
+}
+
+.footer-bottom .links {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  justify-content: flex-end;
+}
+
+.footer-bottom a {
+  color: #030303;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .locations {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .job-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-bottom .links {
+    display: block;
+    line-height: 1.5;
+  }
+
+  .footer-bottom i {
+    font-size: 1.5rem;
+  }
+}
+
+.section-divider {
+  border: none;
+  height: 1.5px;               
+  background-color: #333; 
+  width: 100%;              
+  margin: 30px 0;           
+}
